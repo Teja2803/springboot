@@ -1,0 +1,24 @@
+- name: Create a Service object from an inline definition
+  k8s:
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: spring-deployment
+      labels:
+        app: spring
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: spring
+      template:
+      metadata:
+        labels:
+          app: spring
+        spec:
+          containers:
+          - name: spring
+            image: "463423328685.dkr.ecr.ap-south-1.amazonaws.com/rbi-mccp-repo:latest"
+            ports:
+            - containerPort: 8090
+
