@@ -1,0 +1,12 @@
+---
+  - name: "deploy app"
+    hosts: localhost
+    vars:
+      ansible_python_interpreter: /usr/bin/python3
+    tasks:
+      - name: "k8 task"
+        k8s:
+          kubeconfig: "config"
+          namespace: "default"
+          state: "present"
+          src: "deployment.yml"
