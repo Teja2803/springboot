@@ -6,7 +6,7 @@
     tasks:
       - name: "k8 task"
         k8s:
-          kubeconfig: "config"
+          kubeconfig: "rbroconfig"
           namespace: "default"
           state: "present"
           src: "deployment.yml"
