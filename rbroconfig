@@ -24,4 +24,3 @@ users:
       - get-token
       - --cluster-name
       - MCCP-cluster
-      command: aws
