@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeU1ERXlNVEE1TWpFeE1Gb1hEVE15TURFeE9UQTVNakV4TUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBSnFHClg1VUVFNnJSN3VMaVBnWGtBZDBhbURJVXJDZyt2NFNwSWtKOFlieklNUmFmWnVjcUU1UEN6Zitrd1YrbG5lQlkKOEJJeitsWmIyUFdEREdsSzZSVC91ZkloSVl4MW9zU3B1eG5DUzU2ejNwNk04QzFCb0RVK3ovVWhaZGtxT05ZUQpiS2pSNjNscHJ5SUlENkxVUVphS3graHJNQUZJYnYwMmVzVTBXYnd5dGI2elRrZ2pMN0FVeFJaNTlQWEkydWplCjZhTXRxVkY1QTZ6endKMVhES2IrV0VoR0NPRXVyTkNWeEtUK1ZyQlVlcTNnTkR4MEtLK3dqbkFFNWZCMVJCdW0KMER1TzRDR0xjaGdPTndoMDBySlVGZUpWZ0tUaTU0K004eHhIZnFJQzE0dUY5U1YxdUFaZVNOZmVVTmc3UFlIbApTTnRnSG5NbEFZQlplbEt2M29NQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZCcmVmQU9WQ3ptWFdsam43Z2tiZWJtSktteERNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFCODRnVmNCYU9aNlJkS3VQTkhObm5KN2pKaGRlcUpTeDRaRHUyZTVBL1RwNXExTFpnOQpaaTRhVWtXQU5BaDkzSEtYUm96U3pVcXFNRjhYNTkybWlldjhlR1dRUjl4RHhObUpiZ21DZkYzbnQwZ2JnZWpoCkFnVXo2SW5ZYzZSZ0I1SERuVlZOa0pMUVdGUzkyd0hueVJvY2hMYlF3Y1lzTGNDNUdrbnB4Z3hZQkp3ZHdibisKdEN5WExLN29IUVJuS1NMVjFEWXQwWnJJNmZBTVVRcTdnTkpJL01uMk1KL0tWdXZaSHFpbW52NHBFamRPZHpGWgpVRGVUYVJNSTY5VHM3bmtkeFF2VkoxNGtSVU1HT284UnpBdUI1cWtNaWxjbnNVRlgwUnp3cTAzRXl4a25uNmxJCmwzRmc3QXc4UFhjak5oaDVlaHE4amtpRkx1dk5NdFZwbnJycAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://1DA31FB0DE6EA05055091332C8941DD5.yl4.ap-south-1.eks.amazonaws.com
+  name: arn:aws:eks:ap-south-1:463423328685:cluster/MCCP-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-south-1:463423328685:cluster/MCCP-cluster
+    user: arn:aws:eks:ap-south-1:463423328685:cluster/MCCP-cluster
+  name: arn:aws:eks:ap-south-1:463423328685:cluster/MCCP-cluster
+current-context: arn:aws:eks:ap-south-1:463423328685:cluster/MCCP-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-south-1:463423328685:cluster/MCCP-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - ap-south-1
+      - eks
+      - get-token
+      - --cluster-name
+      - MCCP-cluster
+      command: aws
