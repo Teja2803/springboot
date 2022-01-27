@@ -24,3 +24,4 @@ users:
       - get-token
       - --cluster-name
       - MCCP-cluster
+      command: /usr/local/bin/aws
